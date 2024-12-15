@@ -12,6 +12,12 @@ In the study, data preprocessing steps such as outlier analysis, normalization m
 
 ![image](https://github.com/akay35/logisticregression_classification/blob/main/lg_1.png)
 
+### Outlier Detection and Handling
+
+![image](https://github.com/akay35/logisticregression_classification/blob/main/lg_2.png)
+
+This step identifies and handles outliers in the dataset. The outlier_thresholds function calculates upper and lower bounds for a given column using interquartile range (IQR). The check_outlier function checks for outliers in each column. If outliers exist, the replace_with_thresholds function replaces them with the calculated thresholds. For this dataset, outliers were detected and handled only in the "Insulin" variable.
+
 ### Standardization
 RobustScaler is a scaling method that is particularly useful for datasets with outliers, as it is less sensitive to extreme values. Therefore, it is preferred in datasets like the diabetes dataset, where some variables contain outliers.
 
